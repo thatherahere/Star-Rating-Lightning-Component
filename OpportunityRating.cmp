@@ -1,0 +1,42 @@
+<aura:component controller="OpportunityRatingController" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+    <ltng:require styles="/resource/RatingPlugin/css/jquery.raty.css, 
+                          /resource/SLDS0120/assets/styles/salesforce-lightning-design-system-ltng.css"
+                  scripts="/resource/RatingPlugin/js/jquery.js, /resource/RatingPlugin/js/jquery.raty.js"
+                  afterScriptsLoaded="{!c.doInit}"/>
+    
+    <aura:attribute type="ID" name="recordId"/>
+    <aura:attribute type="Integer" name="currentRating"/>
+    <aura:attribute type="Integer" name="newRating" default="0"/>
+    
+    <div class="slds">
+        <div class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <div class="slds-icon__container">
+	                        <img src="/resource/SLDS0120/assets/icons/custom/custom9_60.png" class="slds-icon  slds-icon--small"/>
+    					</div>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-text-heading--small slds-truncate">How much do you rate this Opportunity?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-card__body">
+                <div class="loading-div">
+                    <div class="slds-spinner--small">
+                        <img src="https://www.lightningdesignsystem.com/assets/images/spinners/slds_spinner_brand.gif" alt="Loading..."/>
+                    </div>
+                </div>
+                <div aura:id="starRating" class="star-rating"></div>
+            </div>
+            <div class="slds-card__footer">
+                <div class="footer-contents">
+                    <div style="display: inline-block;">
+                        Current Rating: <span aura:id="rating">{!v.currentRating}&nbsp;star</span>
+                    </div>
+            	</div>
+            </div>
+        </div>
+	</div>
+</aura:component>
