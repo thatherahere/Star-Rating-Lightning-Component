@@ -1,0 +1,38 @@
+.THIS{
+    margin: 10px 0;
+}
+.THIS div.slds-card{
+    min-height: 135px;
+    background: white;
+}
+.THIS div.star-rating{
+    padding: 10px 0;
+    display:none;
+}
+.THIS .star-rating img{
+    width:2rem;
+}
+.THIS div.slds-card__body{
+    padding: 0 10px;
+    height: 55px;
+}
+.THIS div.slds-card__body .loading-div{
+    position: relative;
+}
+.THIS div.slds-card__body .loading-div .slds-spinner--small{
+    position: absolute;
+    z-index: 9999;
+    left: 45%;
+    top: 15px;
+}
+.THIS .slds-media__figure{
+    padding: 3px;
+    border-radius: 0.2rem;
+    background: #16325c;
+}
+.THIS div.slds-card__footer{
+	height: 35px;
+}
+.THIS div.footer-contents{
+    display:none;
+}
